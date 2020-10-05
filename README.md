@@ -6,24 +6,30 @@
   To get a Git project into your build:
   Step 1. Add the JitPack repository to your build file
   Add it in your root build.gradle at the end of repositories:
+  ```
     allprojects {
       repositories {
         ...
         maven { url 'https://jitpack.io' }
       }
     }
+   ```
 ##  Step 2. Add the dependency
+```
     dependencies {
             implementation 'com.squareup.retrofit2:retrofit:2.5.0'
             implementation 'com.github.bensalcie:payhero-android-mpesa:0.1.3'
     }
-## Step 3. Add this in onCreate() method.
+  ```
+ ## Step 3. Add this in onCreate() method.
+ ```
       private var mApiClient: DarajaApiClient? = null //Intitialization before on create
 
       mApiClient = DarajaApiClient("xxxxxconsumerkeyxxxx", "xxxxconsumersecretxxxx")
       //get consumerkey and secret from https://developer.safaricom.co.ke/user/me/apps
           mApiClient!!.setIsDebug(true) //Set True to enable logging, false to disable.
           getAccessToken()//make request availabe and ready for processing.
+ ```
 ## Step 4.Define access token method.
     //Access token Method being called.
        private fun getAccessToken() {
@@ -38,6 +44,7 @@
       })
         }
 ##  Step 5. Initiate STK Push
+```
    btnDeposit.setOnClickListener {
               val amount = etAmount.text.toString()
               val phone =etPhone.text.toString()
@@ -80,4 +87,6 @@
               }
           })
       }
+      
+   ```
 
