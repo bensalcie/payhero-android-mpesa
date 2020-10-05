@@ -25,7 +25,12 @@
  ```
       private var mApiClient: DarajaApiClient? = null //Intitialization before on create
 
-      mApiClient = DarajaApiClient("xxxxxconsumerkeyxxxx", "xxxxconsumersecretxxxx")
+          mApiClient = DarajaApiClient(
+            "xxxconsumerkeyxxxxx",
+            "xxxxxconsumersecretxxxx",
+            Environment.SANDBOX
+        )
+        //use Environment.PRODUCTION when on production
       //get consumerkey and secret from https://developer.safaricom.co.ke/user/me/apps
           mApiClient!!.setIsDebug(true) //Set True to enable logging, false to disable.
           getAccessToken()//make request availabe and ready for processing.
@@ -63,30 +68,29 @@
           val stkPush = STKPush("MPESA Android Test",amount,"174379","http://mpesa-requestbin.herokuapp.com/1ajipzt1",
               Utils.sanitizePhoneNumber(phone_number)!!,"174379",Utils.getPassword("174379", 
         "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919", timestamp!!)!!
-              , Utils.sanitizePhoneNumber(phone_number)!!,timestamp,"Testing","CustomerPayBillOnline")
+              , Utils.sanitizePhoneNumber(phone_number)!!,timestamp,"Testing",Environment.TransactionType.CustomerPayBillOnline)
           mApiClient!!.setGetAccessToken(false)
-          mApiClient!!.mpesaService()!!.sendPush(stkPush).enqueue(object : Callback<STKPush> {
-              override fun onResponse(call: Call<STKPush?>, response: Response<STKPush>) {
-        //dismiss progress when running
-                  try {
-                      if (response.isSuccessful) {
-                          Log.d("MPESA", "onResponse:${response.body()} ")
-        //Handle when request is sucessful
-        //Get response from variable 'response' 
-        //and manipulate as you want using response.body()
-                      } else {
-                          Log.d("MPESA", "onResponse: ${response.errorBody()}")
-                      }
-                  } catch (e: Exception) {
-                      e.printStackTrace()
-                  }
-              } through
-              override fun onFailure(call: Call<STKPush>, t: Throwable) {
-                  mProgressDialog!!.dismiss()
-                  Log.d("MPESA", "onFailure: $t")
-              }
-          })
+           mApiClient!!.mpesaService()!!.sendPush(stkPush).enqueue(object : Callback<STKResponse> {
+            override fun onResponse(call: Call<STKResponse>, response: Response<STKResponse>) {
+                mProgressDialog!!.dismiss()
+                try {
+                    if (response.isSuccessful) {
+                      //handle response here
+                      //response contains CheckoutRequestID,CustomerMessage,MerchantRequestID,ResponseCode,ResponseDescription
+                    } else {
+                        Timber.e("Response %s", response.errorBody()!!.string())
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+
+            override fun onFailure(call: Call<STKResponse>, t: Throwable) {
+                //mProgressDialog!!.dismiss()
+                Timber.e(t)
+            }
+        })
       }
       
    ```
-
+<a href="https://www.buymeacoffee.com/bensalcie" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 217px !important;" ></a>
