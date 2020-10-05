@@ -1,4 +1,4 @@
-# Payhero Android MPESA Library 
+# Payhero Android MPESA Library [![](https://jitpack.io/v/bensalcie/payhero-android-mpesa.svg)](https://jitpack.io/#bensalcie/payhero-android-mpesa)
   Android MPESA library to request STK Push using MPESA Daraja API.
   Screenshots
  
