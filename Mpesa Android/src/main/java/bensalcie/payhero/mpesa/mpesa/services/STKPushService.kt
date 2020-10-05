@@ -2,6 +2,7 @@ package bensalcie.payhero.mpesa.mpesa.services
 
 import bensalcie.payhero.mpesa.mpesa.model.AccessToken
 import bensalcie.payhero.mpesa.mpesa.model.STKPush
+import bensalcie.payhero.mpesa.mpesa.model.STKResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
