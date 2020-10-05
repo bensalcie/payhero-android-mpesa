@@ -70,10 +70,10 @@
           //Handle progresss here
     //credentials here are test credentials
           val timestamp = Utils.getTimestamp()
-          val stkPush = STKPush("MPESA Android Test",amount,"174379","http://mpesa-requestbin.herokuapp.com/1ajipzt1",
-              Utils.sanitizePhoneNumber(phone_number)!!,"174379",Utils.getPassword("174379", 
-        "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919", timestamp!!)!!
-              , Utils.sanitizePhoneNumber(phone_number)!!,timestamp,"Testing",Environment.TransactionType.CustomerPayBillOnline)
+          val stkPush = STKPush("acc ref",amount,"business number","callback url",
+              Utils.sanitizePhoneNumber(phone_number)!!,"business number",Utils.getPassword("business number", 
+        "passkey", timestamp!!)!!
+              , Utils.sanitizePhoneNumber(phone_number)!!,timestamp,"Trans. desc",Environment.TransactionType.CustomerPayBillOnline)
           mApiClient!!.setGetAccessToken(false)
            mApiClient!!.mpesaService()!!.sendPush(stkPush).enqueue(object : Callback<STKResponse> {
             override fun onResponse(call: Call<STKResponse>, response: Response<STKResponse>) {
