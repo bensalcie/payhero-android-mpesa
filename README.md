@@ -23,7 +23,7 @@
 ```
     dependencies {
             implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-            implementation 'com.github.bensalcie:payhero-android-mpesa:0.1.3'
+            implementation 'com.github.bensalcie:payhero-android-mpesa:0.1.4'
     }
   ```
  ## Step 3. Add this in onCreate() method.
