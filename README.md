@@ -1,9 +1,9 @@
 # Payhero Android MPESA Library [![](https://jitpack.io/v/bensalcie/payhero-android-mpesa.svg)](https://jitpack.io/#bensalcie/payhero-android-mpesa)
   Android MPESA library to request STK Push using MPESA Daraja API.
-  Screenshots
+ # Screenshots
  
 ## How to use the library
-  To get a Git project into your build:
+
 # Step 1. Add the JitPack repository to your build file
   Add it in your root build.gradle at the end of repositories:
   ```
@@ -78,7 +78,7 @@
                       //handle response here
                       //response contains CheckoutRequestID,CustomerMessage,MerchantRequestID,ResponseCode,ResponseDescription
                     } else {
-                        Timber.e("Response %s", response.errorBody()!!.string())
+                        //Timber.e("Response %s", response.errorBody()!!.string())
                     }
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -87,10 +87,10 @@
 
             override fun onFailure(call: Call<STKResponse>, t: Throwable) {
                 //mProgressDialog!!.dismiss()
-                Timber.e(t)
+                //Timber.e(t)
             }
         })
       }
       
    ```
-<a href="https://www.buymeacoffee.com/bensalcie" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/bensalcie" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
