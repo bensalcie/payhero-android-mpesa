@@ -11,7 +11,7 @@
 
 ## Step 1. Add the JitPack repository to your build file
   Add it in your root build.gradle at the end of repositories:
-  ```
+  ```kotlin
     allprojects {
       repositories {
         ...
@@ -20,14 +20,14 @@
     }
    ```
 ##  Step 2. Add the dependency
-```
+```kotlin
     dependencies {
             implementation 'com.squareup.retrofit2:retrofit:2.5.0'
             implementation 'com.github.bensalcie:payhero-android-mpesa:0.1.6'
     }
   ```
  ## Step 3. Add this in onCreate() method.
- ```
+ ```kotlin
       private var mApiClient: DarajaApiClient? = null //Intitialization before on create
 
           mApiClient = DarajaApiClient(
@@ -41,6 +41,7 @@
           getAccessToken()//make request availabe and ready for processing.
  ```
 ## Step 4.Define access token method.
+```kotlin
     //Access token Method being called.
        private fun getAccessToken() {
       mApiClient!!.setGetAccessToken(true)
@@ -53,8 +54,9 @@
           override fun onFailure(call: Call<AccessToken?>, t: Throwable) {}
       })
         }
+  ```
 ##  Step 5. Initiate STK Push
-```
+```kotlin
    btnDeposit.setOnClickListener {
               val amount = etAmount.text.toString()
               val phone =etPhone.text.toString()
