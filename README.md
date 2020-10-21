@@ -1,9 +1,6 @@
 # Payhero Android MPESA Library [![](https://jitpack.io/v/bensalcie/payhero-android-mpesa.svg)](https://jitpack.io/#bensalcie/payhero-android-mpesa)
   Android MPESA library to request STK Push using MPESA Daraja API.
-  [![Watch on GitHub](https://img.shields.io/github/watchers/jonsn0w/hyde.svg?style=social)](https://github.com/jonsn0w/Hyde/watchers)
-[![Star on GitHub](https://img.shields.io/github/stars/jonsn0w/hyde.svg?style=social)](https://github.com/jonsn0w/hyde/stargazers)
-[![Tweet](https://img.shields.io/twitter/url/https/github.com/jonsn0w/hyde.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Hyde!%20%E2%9C%A8%20An%20accessible,%20open-source%20markdown%20editor%20for%20any%20user%20E2%9C%A8%20https://github.com/jonsn0w/hyde%20%F0%9F%A4%97)
- # Screenshots
+# Screenshots
   <p float="center">
   <img src="https://github.com/bensalcie/payhero-android-mpesa/blob/main/screen.jpg" width="200" /> 
   <img src="https://github.com/bensalcie/payhero-android-mpesa/blob/main/screentwo.jpg" width="200" />
@@ -105,11 +102,8 @@
    ```
 <a href="https://www.buymeacoffee.com/bensalcie" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-<div class="button-group minor-group">
-    <a href="https://play.google.com/store/apps/details?id=bs.dicemoney.app" class="button primary">Real Example</a>
-    <a href="#" class="button">Inbox</a>
-    <a href="#" class="button">Account</a>
-    <a href="#" class="button">Logout</a>
-</div>
+
+[See Real Demo Here](https://play.google.com/store/apps/details?id=bs.dicemoney.app)
+
 
 
