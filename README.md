@@ -1,5 +1,6 @@
 # Payhero Android MPESA Library [![](https://jitpack.io/v/bensalcie/payhero-android-mpesa.svg)](https://jitpack.io/#bensalcie/payhero-android-mpesa)
-  Android MPESA library to request STK Push using MPESA Daraja API.
+  Android MPESA library to request STK Push using MPESA Daraja API.[<img src="https://s18955.pcdn.co/wp-content/uploads/2018/02/github.png" width="25"/>](https://github.com/bensalcie/repository/subscription)
+
 # Screenshots
   <p float="center">
   <img src="https://github.com/bensalcie/payhero-android-mpesa/blob/main/screen.jpg" width="200" /> 
@@ -106,7 +107,6 @@
 [See Real Demo Here](https://play.google.com/store/apps/details?id=bs.dicemoney.app)
 
 
-[<img src="https://s18955.pcdn.co/wp-content/uploads/2018/02/github.png" width="25"/>](https://github.com/user/repository/subscription)
 
 
 
