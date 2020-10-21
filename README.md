@@ -43,12 +43,12 @@
 ## Step 4.Define access token method.
 ```kotlin
     //Access token Method being called.
-       private fun getAccessToken() {
-      mApiClient!!.setGetAccessToken(true)
-      mApiClient!!.mpesaService()!!.getAccessToken().enqueue(object : Callback<AccessToken> {
-          override fun onResponse(call: Call<AccessToken?>, response: Response<AccessToken>) {
-        if (response.isSuccessful) {
-            mApiClient!!.setAuthToken(response.body()?.accessToken)
+     private fun getAccessToken() {
+     mApiClient!!.setGetAccessToken(true)
+     mApiClient!!.mpesaService()!!.getAccessToken().enqueue(object : Callback<AccessToken> {
+     override fun onResponse(call: Call<AccessToken?>, response: Response<AccessToken>) {
+     if (response.isSuccessful) {
+          mApiClient!!.setAuthToken(response.body()?.accessToken)
         }
           }
           override fun onFailure(call: Call<AccessToken?>, t: Throwable) {}
@@ -101,3 +101,12 @@
       
    ```
 <a href="https://www.buymeacoffee.com/bensalcie" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+<div class="button-group minor-group">
+    <a href="https://play.google.com/store/apps/details?id=bs.dicemoney.app" class="button primary">Real Example</a>
+    <a href="#" class="button">Inbox</a>
+    <a href="#" class="button">Account</a>
+    <a href="#" class="button">Logout</a>
+</div>
+
+
