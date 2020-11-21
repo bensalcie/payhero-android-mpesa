@@ -5,7 +5,8 @@
   <img src="https://github.com/bensalcie/payhero-android-mpesa/blob/main/screen.jpg" width="200" /> 
   <img src="https://github.com/bensalcie/payhero-android-mpesa/blob/main/screentwo.jpg" width="200" />
   </p>
-
+(Please note that this library is still under development,Feel free to contact me personally if 
+you meet any challenge,Thanks)
 
 ## How to use the library
 
