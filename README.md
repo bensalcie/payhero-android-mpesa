@@ -8,6 +8,9 @@
 (Please note that this library is still under development,Feel free to contact me personally if 
 you meet any challenge,Thanks)
 
+## Sample of Implementation can be found here:
+https://github.com/bensalcie/Trivia-Money
+
 ## How to use the library
 
 ## Step 1. Add the JitPack repository to your build file
