@@ -86,8 +86,12 @@ https://github.com/bensalcie/Trivia-Money
                 mProgressDialog!!.dismiss()
                 try {
                     if (response.isSuccessful) {
+                     if (response.body() != null) {
+                    Log.d("PAYMENTS", "onResponse: Time to process, confirm etc : "+response.body().component1());
                       //handle response here
                       //response contains CheckoutRequestID,CustomerMessage,MerchantRequestID,ResponseCode,ResponseDescription
+                          }
+                   
                     } else {
                         //Timber.e("Response %s", response.errorBody()!!.string())
                     }
@@ -107,7 +111,7 @@ https://github.com/bensalcie/Trivia-Money
 <a href="https://www.buymeacoffee.com/bensalcie" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 
-[See Real Demo Here](https://play.google.com/store/apps/details?id=bs.dicemoney.app)
+[See Real Demo Here](https://github.com/bensalcie/Express-Pay-PayheroMpesa-Example)
 
 
 
